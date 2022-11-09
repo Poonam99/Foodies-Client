@@ -1,15 +1,13 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
-import Banner from '../Banner/Banner';
+import { Link, useLoaderData } from 'react-router-dom';
 
-const Home = () => {
+const Allservices = () => {
     const data = useLoaderData();
     return (
         <div>
-            <Banner></Banner>
             {
-                data.slice(0, 3).map(service =>
+                data.map(service =>
                     <div key={service._id}>
                         <section className="dark:bg-gray-800 dark:text-gray-100">
                             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-center">
@@ -41,12 +39,8 @@ const Home = () => {
                     </div>
                 )
             }
-            <div className='flex justify-center items-center'>
-                < Link to={'/Allservices'}><button className='btn btn-outline btn-ghost'>See All</button></Link>
-            </div>
         </div>
-
     );
 };
 
-export default Home;
+export default Allservices;
