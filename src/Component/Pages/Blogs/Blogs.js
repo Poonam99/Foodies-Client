@@ -28,6 +28,14 @@ const Blogs = () => {
                     *It is basically used on the client-side.
                     *It is mostly used on the server-side.</p>
             </div>
+            <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
+
+                <div className="mt-6 mb-2">
+
+                    <h2 className="text-xl font-semibold tracking-wide">How does NodeJS handle multiple requests at the same time?</h2>
+                </div>
+                <p className="dark:text-gray-100">NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. Multiple clients make multiple requests to the NodeJS server. NodeJS receives these requests and places them into the EventQueue .</p>
+            </div>
         </div>
     );
 };
