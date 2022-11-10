@@ -3,19 +3,23 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="dark:bg-black dark:text-White">
-            <div className="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-gray-400">
-                <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
-                    <li>Shop</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Pricing</li>
-                    <li>Contact</li>
-                </ul>
+            <div className="container flex justify-between flex-col p-4 mx-auto md:p-8 lg:flex-row ">
+                <div>
+                    <ul className="self-center py-6  text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
+                        <li>Shop</li>
+                        <li>About</li>
+                        <li>Blog</li>
+                        <li>Pricing</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
 
-                <div className="flex justify-between pt-6 lg:pt-0">
-                    <div>
-                        <span>©2022 Foodies</span>
-                    </div>
+                <div className='flex justify-center items-center'>
+                    <span>©2022 Foodies</span>
+                </div>
+
+                <div className="flex items-center justify-between pt-6 lg:pt-0">
+
                     <div className="flex justify-center space-x-4">
                         <a rel="noopener noreferrer" href="#" title="Instagram" className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 dark:bg-violet-400 dark:text-gray-900">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-4 h-4">
