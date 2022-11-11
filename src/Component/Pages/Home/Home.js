@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Link, useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 
 const Home = () => {
@@ -42,7 +42,7 @@ const Home = () => {
                 )
             }
             <div className='flex justify-center items-center'>
-                < Link to={'/Allservices'}><button className='btn btn-outline btn-ghost'>See All</button></Link>
+                < Link to={'/services'}><button className='btn btn-outline btn-ghost'>See All</button></Link>
             </div>
         </div>
 

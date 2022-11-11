@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
 
     const logOut = () => {
         setLoading(true);
-        localStorage.removeItem('animator-user-token');
+        localStorage.removeItem('foodies-token');
         return signOut(auth);
     }
 

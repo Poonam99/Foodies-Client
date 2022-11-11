@@ -1,9 +1,9 @@
 import Lottie from 'lottie-web';
 import React, { useContext, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
-import useTitle from '../../Hooks/useTitle';
+import { AuthContext } from '../../../Context/Authprovider/Authprovider';
+import useTitle from '../../../Hooks/useTitle';
 
 
 const Login = () => {
@@ -24,7 +24,7 @@ const Login = () => {
                     email: user.email
                 }
                 console.log(currentUser);
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://food-service-app-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -34,7 +34,7 @@ const Login = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
-                        localStorage.setItem("animator-user-token", data.token);
+                        localStorage.setItem("foodies-token", data.token);
                         navigate(from, { replace: true });
                     })
             })
@@ -56,7 +56,7 @@ const Login = () => {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            animationData: require('../../Assets/register.json'),
+            animationData: require('../../../.././Images/login.json'),
         });
         return () => {
             Lottie.destroy();

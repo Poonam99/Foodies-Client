@@ -2,9 +2,8 @@ import Lottie from 'lottie-web';
 import React, { useContext, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
-
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import useTitle from '../../Hooks/useTitle';
+import { AuthContext } from '../../../Context/Authprovider/Authprovider';
+import useTitle from '../../../Hooks/useTitle';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -18,7 +17,7 @@ const SignUp = () => {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            animationData: require('../../Assets/register.json'),
+            animationData: require('../../../../Images/login.json'),
         });
         return () => {
             Lottie.destroy();
